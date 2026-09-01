@@ -1,0 +1,9 @@
+[variables]
+NIXPACKS_NODE_VERSION = "22"
+NPM_CONFIG_PRODUCTION = "false"
+NITRO_PRESET = "node"
+VITE_AUTH_ENABLED = "false"
+HOST = "0.0.0.0"
+
+[start]
+cmd = "node scripts/start-prod.mjs"

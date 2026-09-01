@@ -18,9 +18,21 @@ npm run dev
 Produktion:
 
 ```bash
-npm run build
-npm run preview
+NITRO_PRESET=node npm run build
+npm start
 ```
+
+## Railway
+
+Das Repo ist für Railway vorkonfiguriert (`railway.json`, `nixpacks.toml`, Node 22).
+
+- **Build:** `npm run build` (setzt intern `NITRO_PRESET=node`)
+- **Start:** `node scripts/start-prod.mjs` (hört auf `$PORT`)
+- **Variablen:** `VITE_AUTH_ENABLED=false`, `HOST=0.0.0.0`
+
+Falls im Dashboard noch `node dist/server/server.js` steht: nach dem nächsten Deploy existiert diese Datei als Starter, oder Startkommando auf `npm start` stellen.
+
+Domain `fraukopp.de` unter Railway → Settings → Networking als Custom Domain eintragen.
 
 ## Hinweise
 
